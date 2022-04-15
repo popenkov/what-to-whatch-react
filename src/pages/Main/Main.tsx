@@ -1,5 +1,5 @@
-import GenreList from "../genreItem/genreList/genreList";
-import FilmCard from "../filmCard/filmCard";
+import GenreList from "../../components/genreItem/genreList/genreList";
+import FilmCard from "../../components/filmCard/filmCard";
 
 function Main() {
   return (
