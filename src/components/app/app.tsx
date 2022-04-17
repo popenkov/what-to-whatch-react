@@ -5,11 +5,16 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import AddReview from '../../pages/AddReview/AddReview';
 import NotFound404 from '../../pages/NotFound404/NotFound404';
 
-function App(): JSX.Element {
+type AppProps = {
+  films: any[];
+  reviews: any[];
+};
+
+function App({ films, reviews }: AppProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={AppRoute.Root} element={<Main />} />
+        <Route path={AppRoute.Root} element={<Main films={films} />} />
         {/* <Route path={AppRoute.AddReview} element={<AddReview />} /> */}
         <Route
           path={AppRoute.AddReview}
