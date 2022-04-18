@@ -1,8 +1,8 @@
 import GenreList from '../../components/genreItem/genreList/genreList';
-import FilmCard from '../../components/FilmCard/FilmCard';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import FilmCatalogList from '../../components/FilmCatalogList/FilmCatalogList';
+import ShowMoreBtn from '../../components/ShowMoreBtn/ShowMoreBtn';
 
 type MainProps = {
   films: any[];
@@ -169,11 +169,7 @@ function Main({ films }: MainProps): JSX.Element {
 
           <FilmCatalogList films={films} />
 
-          <div className='catalog__more'>
-            <button className='catalog__button' type='button'>
-              Show more
-            </button>
-          </div>
+          <ShowMoreBtn />
         </section>
         <Footer />
       </div>

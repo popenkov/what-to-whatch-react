@@ -4,6 +4,7 @@ import { AppRoute, AuthorizationStatus } from '../../const';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import AddReview from '../../pages/AddReview/AddReview';
 import NotFound404 from '../../pages/NotFound404/NotFound404';
+import Player from '../../pages/Player/Player';
 
 type AppProps = {
   films: any[];
@@ -24,6 +25,7 @@ function App({ films, reviews }: AppProps): JSX.Element {
             </PrivateRoute>
           }
         />
+        <Route path={AppRoute.Player} element={<Player />} />
         <Route path={AppRoute.NotFound} element={<NotFound404 />} />
       </Routes>
     </BrowserRouter>
